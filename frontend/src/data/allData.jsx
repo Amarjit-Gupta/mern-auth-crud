@@ -98,7 +98,7 @@ const AllData = () => {
                                 value.map((v, i) => {
                                     return (
                                         <div className="card" key={v._id}>
-                                            <div className="card-child1"><img src={`http://localhost:5000/uploads/${v.file}`} alt="broken image" /></div>
+                                            <div className="card-child1"><img src={`${URL}/uploads/${v.file}`} alt="broken image" /></div>
                                             <div className="card-child2">
                                                 <div className="card-text">
                                                     <div className="card-text-child1">Name:</div>

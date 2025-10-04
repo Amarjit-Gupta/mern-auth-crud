@@ -109,7 +109,7 @@ const EditData = () => {
                     {error && !company && <p className="error-text">Enter Company Name</p>}
                     <div className="file-box">
                         <div className="file-box1"><input type="file" onChange={(e) => setFile(e.target.files[0])} /></div>
-                        <div className="file-box2"><img src={`http://localhost:5000/uploads/${oldFile}`} alt="" /></div>
+                        <div className="file-box2"><img src={`${URL}/uploads/${oldFile}`} alt="" /></div>
                         <input type="hidden" value={oldFile} />
                     </div>
                     <div>
