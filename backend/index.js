@@ -12,9 +12,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors({
-    origin:"https://mern-auth-frontend-dx9h.onrender.com"
-}));
+app.use(cors());
 
 app.get("/hello",(req,res)=>{
     res.send("Hello");
