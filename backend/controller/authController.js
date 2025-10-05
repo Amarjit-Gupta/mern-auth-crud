@@ -47,7 +47,7 @@ export const signup = async (req, res) => {
         return res.status(200).json({ success: true, result, message: "OTP send to your email id for verify account..." });
     }
     catch (err) {
-        return res.status(500).json({ success: false, message: "something went wrong" });
+        return res.status(500).json({ success: false, message: err.message });
     }
 }
 
