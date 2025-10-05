@@ -185,7 +185,7 @@ const Signup = () => {
             <div className="signup">
                 {emailSend ?
                     <>
-                        <p className="heading1">Create Account1</p>
+                        <p className="heading1">Create Account</p>
                         <p className="heading2">create your account</p>
                         <form onSubmit={handleSubmit}>
                             <div className="input-box"><MdPermIdentity className="icon" /><input type="text" placeholder="Enter name..." name="name" value={inputValue.name} onChange={handleChange} /></div>
