@@ -22,6 +22,7 @@ export const signup = async (req, res) => {
             oldUser.password = password;
             await oldUser.save();
 console.log("in auth controller:",process.env.SMTP_EMAIL);
+            console.log("hello auth controller:");
             const mailOptions = {
                 from: process.env.SMTP_EMAIL,
                 to: oldUser.email,
