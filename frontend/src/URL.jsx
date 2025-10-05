@@ -1,1 +1,1 @@
-export const URL = "https://mern-auth-backend-wkpm.onrender.com";
+export const URL = "http://localhost:5000";
