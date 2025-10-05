@@ -21,10 +21,9 @@ export const signup = async (req, res) => {
             oldUser.name = name;
             oldUser.password = password;
             await oldUser.save();
-console.log("in auth controller:",process.env.SMTP_EMAIL);
-            console.log("hello auth controller:");
+            
             const mailOptions = {
-                from: process.env.SMTP_EMAIL,
+                from:"guptamantu775@gmail.com",
                 to: oldUser.email,
                 subject: "mern auth otp",
                 text: `your otp for verify account is ${otp}.`
@@ -39,7 +38,7 @@ console.log("in auth controller:",process.env.SMTP_EMAIL);
         let result = await data.save();
 
         const mailOptions = {
-            from: process.env.SMTP_EMAIL,
+            from: "guptamantu775@gmail.com",
             to: email,
             subject: "mern auth otp",
             text: `your otp for verify account is ${otp}.`
@@ -143,7 +142,7 @@ export const sendOtp = async (req, res) => {
         await user.save();
 
         const mailOptions = {
-            from: process.env.SMTP_EMAIL,
+            from:"guptamantu775@gmail.com",
             to: user.email,
             subject: "mern auth otp",
             text: `your otp for reset password is ${otp}.`
