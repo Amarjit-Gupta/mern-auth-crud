@@ -9,6 +9,7 @@ import EditData from "./data/editData";
 import AllData from "./data/allData";
 import Navbar from "./components/navbar";
 import { useEffect, useState } from "react";
+import Error from "./components/Error";
 
 const App = () => {
 
@@ -35,6 +36,7 @@ const App = () => {
           <Route path={'/signup'} element={<Signup />} />
           <Route path={'/login'} element={<Login />} />
           <Route path={'/forgot-password'} element={<ForgotPassword />} />
+          <Route path={'*'} element={<Error />} />
         </Routes>
       </BrowserRouter>
     </div>
