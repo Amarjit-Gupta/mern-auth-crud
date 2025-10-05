@@ -23,7 +23,7 @@ export const signup = async (req, res) => {
             await oldUser.save();
 
             const mailOptions = {
-                from: "guptamantu775@gmail.com",
+                from: process.env.SMTP_EMAIL,
                 to: oldUser.email,
                 subject: "mern auth otp",
                 text: `your otp for verify account is ${otp}.`
@@ -38,7 +38,7 @@ export const signup = async (req, res) => {
         let result = await data.save();
 
         const mailOptions = {
-            from: "guptamantu775@gmail.com",
+            from: process.env.SMTP_EMAIL,
             to: email,
             subject: "mern auth otp",
             text: `your otp for verify account is ${otp}.`
@@ -142,7 +142,7 @@ export const sendOtp = async (req, res) => {
         await user.save();
 
         const mailOptions = {
-            from: "guptamantu775@gmail.com",
+            from: process.env.SMTP_EMAIL,
             to: user.email,
             subject: "mern auth otp",
             text: `your otp for reset password is ${otp}.`
