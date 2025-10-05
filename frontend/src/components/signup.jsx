@@ -58,7 +58,7 @@ const Signup = () => {
         }
         else if (inputValue.name.trim() && inputValue.email.trim() && inputValue.password.trim()) {
             setLoading(true);
-            try {
+            // try {
                 let data = await fetch(`${URL}/auth/signup`, {
                     method: "post",
                     body: JSON.stringify(inputValue),
@@ -74,11 +74,11 @@ const Signup = () => {
                     toast.error(result.message);
                     setLoading(false);
                 }
-            }
-            catch (err) {
-                toast.error("something went wrong...");
-                setLoading(false);
-            }
+            // }
+            // catch (err) {
+            //     toast.error("something went wrong...");
+            //     setLoading(false);
+            // }
         }
         else {
             toast.warn("white space is not allowed.");
