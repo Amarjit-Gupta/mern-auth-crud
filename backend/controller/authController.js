@@ -4,7 +4,7 @@ import Jwt from 'jsonwebtoken';
 
 // for signup
 export const signup = async (req, res) => {
-    try {
+    // try {
         const { name, email, password } = req.body;
         if (!name || !email || !password) {
             return res.status(400).json({ success: false, message: "please provide name, email and password..." });
@@ -45,10 +45,10 @@ export const signup = async (req, res) => {
         }
         await transporter.sendMail(mailOptions);
         return res.status(200).json({ success: true, result, message: "OTP send to your email id for verify account..." });
-    }
-    catch (err) {
-        return res.status(500).json({ success: false, message: err.message });
-    }
+    // }
+    // catch (err) {
+    //     return res.status(500).json({ success: false, message: err.message });
+    // }
 }
 
 // send otp and save data for signup
