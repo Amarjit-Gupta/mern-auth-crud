@@ -14,7 +14,9 @@ app.use(express.json());
 
 app.use(cors());
 
-app.get("/hello",(req,res)=>{
+
+// for test
+app.get("/",(req,res)=>{
     res.send("Hello");
 });
 
