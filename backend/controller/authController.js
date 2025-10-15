@@ -84,7 +84,7 @@ export const verifyEmail = async (req, res) => {
         });
     }
     catch (err) {
-        return res.status(500).json({ success: false, message: "something went wrong" });
+        return res.status(500).json({ success: false, message: "something went wrong",message: err.message });
     }
 }
 
@@ -117,7 +117,7 @@ export const login = async (req, res) => {
         });
     }
     catch (err) {
-        return res.status(500).json({ success: false, message: "something went wrong" });
+        return res.status(500).json({ success: false, message: "something went wrong",message: err.message });
     }
 }
 
@@ -151,7 +151,7 @@ export const sendOtp = async (req, res) => {
         return res.status(200).json({ success: true, user, message: "OTP send successfully..." });
     }
     catch (err) {
-        return res.status(500).json({ success: false, message: "something went wrong" });
+        return res.status(500).json({ success: false, message: "something went wrong",message: err.message });
     }
 }
 
@@ -179,6 +179,6 @@ export const updatePassword = async (req, res) => {
         return res.status(200).json({ success: true, user, message: "Password updated..." });
     }
     catch (err) {
-        return res.status(500).json({ success: false, message: "something went wrong" });
+        return res.status(500).json({ success: false, message: "something went wrong",message: err.message });
     }
 }
