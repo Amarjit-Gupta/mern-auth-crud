@@ -200,7 +200,7 @@ const Signup = () => {
                     </>
                     :
                     <>
-                        <p className="heading1">Reset Password OTP</p>
+                        <p className="heading1">Verify Email OTP</p>
                         <p className="heading2">Enter the 6-digit code sent to your email</p>
                         <form onSubmit={handleOtpSubmit}>
                             <div className="otp-main">
